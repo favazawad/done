@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تمّم</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>تـمّـم</h1>
+        <p>مرحبًا بك في "تمّم"، مساعدك لإنجاز المهام بسهولة وسرعة!</p>
+    </header>
+
+    <!-- شاشة تسجيل الدخول -->
+    <section id="login-screen">
+        <h2>تسجيل الدخول</h2>
+        <form id="login-form">
+            <label for="phone-number">رقم الجوال:</label>
+            <input type="tel" id="phone-number" placeholder="05XXXXXXXX" required>
+            <button type="button" id="send-otp">إرسال رمز التحقق</button>
+            <div id="otp-section" class="hidden">
+                <label for="otp-code">رمز التحقق:</label>
+                <input type="number" id="otp-code" placeholder="XXXX" required>
+                <button type="submit">تسجيل الدخول</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- الصفحة الرئيسية -->
+    <section id="home-screen" class="hidden">
+        <h2>مرحبًا بك!</h2>
+        <p>اختر الخدمة التي ترغب في إنجازها:</p>
+        <div class="services">
+            <button class="service" data-service="booking">🔖 حجز المواعيد</button>
+            <button class="service" data-service="bill-payment">💳 إدارة الفواتير</button>
+            <button class="service" data-service="product-order">🛒 طلب المنتجات</button>
+            <button class="service" data-service="administrative-tasks">📄 الخدمات الإدارية</button>
+            <button class="service" data-service="consulting">💡 الاستشارات</button>
+        </div>
+        <button id="new-request">طلب جديد</button>
+    </section>
+
+    <!-- صفحة حالة الطلبات -->
+    <section id="orders-screen" class="hidden">
+        <h2>حالة الطلبات</h2>
+        <p>الطلبات الحالية والخدمات المقدمة:</p>
+        <div id="orders-list">
+            <!-- أمثلة على الطلبات -->
+            <div class="order">
+                <p>🔖 حجز موعد طبي</p>
+                <p>الحالة: قيد التنفيذ</p>
+            </div>
+            <div class="order">
+                <p>💳 دفع فاتورة الكهرباء</p>
+                <p>الحالة: مكتمل</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- صفحة الدفع -->
+    <section id="payment-screen" class="hidden">
+        <h2>الدفع الإلكتروني</h2>
+        <form id="payment-form">
+            <label for="payment-method">اختر طريقة الدفع:</label>
+            <select id="payment-method">
+                <option value="apple-pay">Apple Pay</option>
+                <option value="stc-pay">STC Pay</option>
+                <option value="credit-card">بطاقة بنكية</option>
+            </select>
+            <button type="submit">إتمام الدفع</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
